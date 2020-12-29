@@ -6,6 +6,7 @@
         christophhaid
       </h1>
       <div class="links">
+        <router-link to="about" class="button--grey">About<router-link
         <a
           href="https://nuxtjs.org/"
           target="_blank"
