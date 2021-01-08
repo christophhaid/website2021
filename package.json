@@ -10,16 +10,27 @@
     "test": "jest"
   },
   "dependencies": {
+    "@luxdamore/vue-cursor-fx": "^1.4.0",
     "@nuxtjs/pwa": "^3.0.2",
+    "animate.css": "^4.1.1",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6"
+    "nuxt": "^2.14.6",
+    "vue-kinesis": "^1.2.3"
   },
   "devDependencies": {
+    "@nuxtjs/color-mode": "^2.0.2",
+    "@nuxtjs/google-fonts": "^1.2.0",
     "@nuxtjs/tailwindcss": "^3.1.0",
     "@vue/test-utils": "^1.1.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^26.5.0",
+    "fibers": "^5.0.0",
     "jest": "^26.5.0",
+    "pug": "^3.0.0",
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.32.0",
+    "sass-loader": "^10.1.0",
+    "tailwindcss-dark-mode": "^1.1.7",
     "vue-jest": "^3.0.4"
   }
 }

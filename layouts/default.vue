@@ -1,20 +1,34 @@
 <template>
-  <div>
-    <Nuxt />
-  </div>
+  <main >
+    <div class="content">
+      <Nuxt/>
+    </div>
+    
+     <custom-cursor
+      :targets="['img', 'a', 'button', 'your-hover-class']"
+      :circleColor="'#fff'"
+      :circleColorHover="'#fff'"
+      :dotColor="'#fff'"
+      :dotColorHover="'lightgray'"
+      :hoverSize="1.5"
+    ></custom-cursor>
+  </main>
 </template>
+<script>
+// Component
+// import { CursorFx } from "@luxdamore/vue-cursor-fx";
+// import "@luxdamore/vue-cursor-fx/dist/CursorFx.css";
+
+// Layout
+export default {
+  name: "default",
+  // components: { CursorFx }
+};
+</script>
 
 <style>
 html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: 'Playfair Display', serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -23,6 +37,8 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
+
+* { cursor: none; }
 
 *,
 *::before,

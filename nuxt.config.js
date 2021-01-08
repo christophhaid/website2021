@@ -11,16 +11,42 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Lato:400,700'}
     ]
   },
 
+  // loading: '~/components/LoadingBar.vue',
+  loading: { color: '#3b8070' },
+
+  // colorMode: {
+  //   classSuffix: ''
+  // },
+
+  tailwindcss: {
+    cssPath: '~/assets/styles/tailwind.scss',
+    configPath: 'tailwind.config.js',
+    exposeConfig: false,
+    config: {}
+  },
+
+  googleFonts: {
+    families: {
+      'Playfair+Display': true,
+      'Poiret+One': true,
+      'Secular+One': true,
+    },
+    preload: true,
+    prefetch: true,
+    display: 'swap',
+  },
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
-  ],
+ css: ['@/assets/styles/main.scss'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    '~/plugins/animate.js'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -30,6 +56,8 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/google-fonts',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)

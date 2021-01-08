@@ -1,0 +1,76 @@
+:root {
+    --color: #433422;
+    --color-secondary: #504231;
+    --bg: #EAE5D6;
+    --bg-secondary: #eae0c9;
+    --border-color: #ded0bf;
+
+
+    --sepia: 234, 229, 214;
+    --font-main: 'Playfair Display', serif;
+    --font-titleone: 'Poiret One', cursive;;
+    --font-titletwo: 'Secular One', sans-serif;
+  }
+  
+  .dark-mode {
+    --color: #ebf4f1;
+    --color-primary: #41b38a;
+    --color-secondary: #fdf9f3;
+    --bg: #191919;
+    --bg-secondary: #071521;
+    --border-color: #0d2538;
+  }
+  .green {
+    --color: #433422;
+    --color-secondary: #504231;
+    --bg: #EAE5D6;
+    --bg-secondary: #eae0c9;
+    --border-color: #ded0bf;
+  }
+  
+  body {
+    font-family: var(--font-main);
+    background-color: var(--bg);
+    color: var(--color);
+    transition: background-color 0.3s;
+  }
+  a {
+    color: var(--color-primary);
+  }
+
+.appNoise {
+    height: 100%;
+    height: 100vh;
+    // height: calc(var(--vh,1vh)*100);
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+    &::after {
+        -webkit-animation: grain 8s steps(10) infinite;
+        animation: grain 8s steps(10) infinite;
+        background-image: url(~assets/images/bggain.png);
+        content: "";
+        height: 300%;
+        left: -50%;
+        opacity: 0.2;
+        position: fixed;
+        top: -110%;
+        width: 300%;
+    }
+}
+
+@keyframes grain {
+    0%, 100% { transform:translate(0, 0) }
+    10% { transform:translate(-5%, -10%) }
+    20% { transform:translate(-15%, 5%) }
+    30% { transform:translate(7%, -25%) }
+    40% { transform:translate(-5%, 25%) }
+    50% { transform:translate(-15%, 10%) }
+    60% { transform:translate(15%, 0%) }
+    70% { transform:translate(0%, 15%) }
+    80% { transform:translate(3%, 35%) }
+    90% { transform:translate(-10%, 10%) }
+  }
