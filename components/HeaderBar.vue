@@ -4,14 +4,14 @@
             <div class="appHeader__texts text-left">
                 <div class="overflow-hidden">
                     <transition appear name="custom-classes-transition" enter-active-class="animate__animated animate__slideInUp animate__delay-1s">
-                    <h2 class="text-2xl">
+                    <h2 class="text-lg lg:text-2xl">
                     Senior Product Designer
                     </h2>
                     </transition>
                 </div>
                 <div class="overflow-hidden">
                     <transition appear name="custom-classes-transition" enter-active-class="animate__animated animate__slideInUp animate__delay-2s">
-                    <h2 class="text-2xl">
+                    <h2 class="text-lg lg:text-2xl">
                     Front-end Developer
                     </h2>
                     </transition>
@@ -47,6 +47,7 @@
             justify-content: space-between;
             position: relative;
             width: 100%;
+            align-items: center;
         }
 }
 // .fade-enter-active,

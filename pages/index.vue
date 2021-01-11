@@ -77,14 +77,12 @@ export default {
 <style lang="scss">
 
 .heroMain{
-  height: calc(100vh - 2px);
+  height: calc(100vh - 70px);
   width: 100vw;
   overflow: hidden;
   position: relative;
   &__wrapper{
-    -webkit-box-align: center;
     align-items: center;
-    display: -webkit-box;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -93,22 +91,26 @@ export default {
     -webkit-box-pack: justify;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 60px;
+    padding: 20px;
     position: relative;
+    @screen lg {
+      height: calc(100vh);
+      padding: 60px;
+    }
 
     .image img{
-      max-width: 320px;
+      max-width: 260px;
       transition: all ease-in-out 0.5s;
-      &:hover{
-        transform: scale(0.7);
-      }
+      // &:hover{
+      //   transform: scale(0.7);
+      // }
       @screen lg {
          max-width: 390px;
       }
     }
   }
   &__text {
-    font-size: 15vw;
+    font-size: 26vw;
     left: 50%;
     position: absolute;
     text-align: center;
@@ -116,6 +118,10 @@ export default {
     transform: translate(-50%,-50%);
     transition: all ease 0.5s;
     z-index: 2;
+    mix-blend-mode: difference;
+    @screen lg {
+       font-size: 15vw;
+      }
     .title {
       font-family: var(--font-titleone);
       display: block;
