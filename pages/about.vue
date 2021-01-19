@@ -4,19 +4,19 @@
     <div>
     <header-bar></header-bar>
     <kinesis-container event="move">
-    <kinesis-element :strength="30"> 
+    <kinesis-element :strength="30" data-kinssis="active"> 
       <kinesis-container event="scroll">
       <section class="heroAbout">
-          <kinesis-element :strength="100" axis="x" :maxX="50" :originX="0"> 
+          <kinesis-element :strength="100" axis="x" :maxX="50" :originX="0" data-kinssis="active"> 
         <h2 class="size-xl  text-center lg:text-right">Designer with</h2>
           </kinesis-element>
-        <kinesis-element :strength="-180" axis="x" :maxX="50" :originX="0"> 
+        <kinesis-element :strength="-180" axis="x" :maxX="50" :originX="0" data-kinssis="active"> 
         <h2 class="size-xl text-center lg:text-right">Developer´s mind</h2>
         </kinesis-element>
-              <kinesis-element :strength="150" axis="x" :maxX="50" :originX="0"> 
+              <kinesis-element :strength="150" axis="x" :maxX="50" :originX="0" data-kinssis="active"> 
         <h2 class="size-xl text-center">& Developer with</h2>
         </kinesis-element>
-              <kinesis-element :strength="-100" axis="x" :maxX="50" :originX="0"> 
+              <kinesis-element :strength="-100" axis="x" :maxX="50" :originX="0" data-kinssis="active"> 
         <h2 class="size-xl text-center lg:text-right">Designers´s eye</h2>
         </kinesis-element>
 
@@ -24,26 +24,34 @@
       </kinesis-container>
      </kinesis-element>
     </kinesis-container>
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-2">
+    <div class="container mx-auto px-4 lg:py-10">
+      <div class="grid lg:grid-cols-2">
         <div class="img">
           <div class="sticky top-0">
-            Image
+            <img alt="" src="~assets/images/christoph.png" class="image__img">
           </div>
         </div>
-        <div class="content text-lg">
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   
+        <div class="content text-2xl pb-8">
+          <p>Senior Product Designer living in Innsbruck, Austria with a heavy focus on awesome interfaces, creative solutions and great user experience.<br></p>
 
-Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.   
+          <p class="mt-4">In the past ten years, I’ve been performing digital, interactive experiences, </p>
 
-Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.   
+          <p class="mt-4">I’m currently working at easybooking, as a user interface designer. Over the past few years, I’ve had the privilege to work on some fantastic projects.</p>
 
-          <h4>Social</h4>
+          <h4 class="text-4xl font-bold mt-6 lg:mt-20">Social</h4>
           <p>
-            <ul>
-              <li>Linkein</li>
+            <ul class="mt-4">
+              <li><a href="https://www.linkedin.com/in/christoph-haid/" class="main-link" target="_blank">LinkedIn</a></li>
+              <li><a href="https://dribbble.com/christophhaid" class="main-link" target="_blank">Dribble</a></li>
+              <li><a href="https://figma.com/@christophhaid" class="main-link" target="_blank">Figma</a></li>
+              <li><a href="https://github.com/christophhaid" class="main-link" target="_blank">Github</a></li>
+              <!-- <li><a href="https://gitlab.com/christoph.haid" class="main-link" target="_blank">Gitlab</a></li> -->
+              <li><a href="https://www.instagram.com/christophhaid/" class="main-link" target="_blank">Instagram</a></li>
+              <li><a href="https://www.behance.net/chrishaid" class="main-link" target="_blank">Behance</a></li>
             </ul>
           </p>
+          <h4 class="text-4xl font-bold mt-6 lg:mt-20">Social</h4>
+          <p><a href="mailto:info@christophhaid.com" class="main-link">hello@christophhaid.com</a></p>
         </div>
       </div>
 
@@ -55,6 +63,9 @@ Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lo
 <script>
 import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 export default {
+  head: {
+    title: 'About Me | Christoph Haid - Product Strategist & UX/UI Designer.',
+  },
   components: {
     KinesisContainer,
     KinesisElement 

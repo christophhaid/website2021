@@ -1,5 +1,5 @@
 <template>
-  <main >
+  <main translate="no" >
     <div class="content">
       <Nuxt/>
     </div>

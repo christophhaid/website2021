@@ -2,18 +2,20 @@ export default {
   // Target (https://go.nuxtjs.dev/config-target)
   target: 'static',
 
-  server: {
-    port: 3000, // default: 3000
-    host: '0.0.0.0' // default: localhost
-  },
+  // server: {
+  //   port: 3000, // default: 3000
+  //   host: '0.0.0.0' // default: localhost
+  // },
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'christophhaid',
+    title: 'Design Thinking | Christoph Haid - Product Strategist & UX/UI Designer.',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'Christoph is an Senior Product UX/UI Designer living in Innsbruck, Austria. UX Designer & Webdeveloper based in Innsbruck Austria. Design the best possible solutions to improve the lives of people.' },
+      { name: 'google' , value: 'notranslate'},
+
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -61,14 +63,15 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode',
     '@nuxtjs/google-fonts',
+    '@nuxtjs/color-mode',
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+   
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

@@ -3,22 +3,22 @@
     <div class="appNoise"></div>
     <div>
     <header-bar></header-bar>
-    <kinesis-container>
+    <kinesis-container >
     <section class="heroMain">
       <div class="heroMain__wrapper">
         <div></div> 
         <div class="heroMain__inner">
-              <kinesis-element :strength="20"> 
+              <kinesis-element :strength="20" data-kinssis="active"> 
                  <transition appear name="custom-classes-transition" enter-active-class="animate__animated animate__fadeIn animate__delay-1s">
                   <figure class="image">
-                    <img draggable="false" alt="" src="~assets/images/christoph.png" class="image__img">
+                    <img alt="" src="~assets/images/christoph.png" class="image__img">
                   </figure>
                  </transition>
               </kinesis-element>
         </div> 
        
         <div class="heroMain__text">
-            <kinesis-element :strength="-20">
+            <kinesis-element :strength="-20" data-kinssis="active">
           <div class="overflow-hidden">
               <transition appear name="custom-classes-transition" enter-active-class="animate__animated animate__slideInUp animate__delay-2s">
               <h2 class="title">
@@ -37,9 +37,12 @@
         </div>
         
         <div class="heroMain__footer w-full flex justify-between">
-          <a @click="$colorMode.value = 'light'" href="#" >light</a>
-          <div class="animate__animated animate__bounce">Scroll to discover</div>
-          <a @click="$colorMode.value = 'dark'" href="#" >dark</a>
+          <a @click="$colorMode.preference = 'light'" href="#" >light</a>
+          <div class="animate__animated animate__bounce">
+            Scroll to discover
+              <div class="icon"></div>
+          </div>
+          <a @click="$colorMode.preference = 'dark'" href="#" >dark</a>
         </div>
       </div>
     </section>
@@ -49,13 +52,12 @@
 </template>
 
 <script>
-import ColorMode from '../components/ColorMode.vue';
+// import ColorMode from '../components/ColorMode.vue';
 import { KinesisContainer, KinesisElement } from 'vue-kinesis'
 
 export default {
   transition: "intro",
   components: { 
-    ColorMode, 
     KinesisContainer,
     KinesisElement 
   },
@@ -78,9 +80,13 @@ export default {
 
 .heroMain{
   height: calc(100vh - 70px);
+  min-height: 600px;
   width: 100vw;
   overflow: hidden;
   position: relative;
+  @screen lg {
+      min-height: calc(100vh);
+  }
   &__wrapper{
     align-items: center;
     display: flex;
@@ -94,8 +100,8 @@ export default {
     padding: 20px;
     position: relative;
     @screen lg {
-      height: calc(100vh);
-      padding: 60px;
+      min-height: calc(100vh);
+      padding: 40px;
     }
 
     .image img{
@@ -110,7 +116,7 @@ export default {
     }
   }
   &__text {
-    font-size: 26vw;
+    font-size: 80px;
     left: 50%;
     position: absolute;
     text-align: center;
@@ -118,7 +124,7 @@ export default {
     transform: translate(-50%,-50%);
     transition: all ease 0.5s;
     z-index: 2;
-    mix-blend-mode: difference;
+    // mix-blend-mode: difference;
     @screen lg {
        font-size: 15vw;
       }
@@ -140,8 +146,30 @@ export default {
   }
 }
 
-// Page Transiton Effect
+.icon:before {
+  content: '';
+  background: var(--color);
+  height: 10px;
+  width: 2px;
+  position: absolute;
+  top: 14px;
+  border-radius: 1px;
+  left: calc(50% - 1px);
+  animation: scroll 1.55s infinite;
+}
 
+@keyframes scroll {
+  15% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+}
+
+
+// Page Transiton Effect
 $t-duration: 800ms;
 $t-delay: 300ms;
 

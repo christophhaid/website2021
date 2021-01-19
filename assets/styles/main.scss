@@ -5,8 +5,7 @@
     --bg-secondary: #eae0c9;
     --border-color: #ded0bf;
 
-
-    --sepia: 234, 229, 214;
+    --sepia: 25, 25, 25;
     --font-main: 'Playfair Display', serif;
     --font-titleone: 'Poiret One', cursive;;
     --font-titletwo: 'Secular One', sans-serif;
@@ -19,6 +18,8 @@
     --bg: #191919;
     --bg-secondary: #071521;
     --border-color: #0d2538;
+
+    --sepia: 234, 229, 214;
   }
   .green {
     --color: #433422;
@@ -34,9 +35,34 @@
     color: var(--color);
     transition: background-color 0.3s;
   }
-  a {
-    color: var(--color-primary);
+  a.main-link{
+    background: linear-gradient(to bottom, var(--color-primary) 0%, var(--color-primary) 100%);
+    background-position: 0 100%;
+    background-repeat: repeat-x;
+    background-size: 3px 3px;
+    text-decoration: none;
+    transition: all ease-in-out 0.5s;
   }
+  
+  a.main-link:hover {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .6s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23ff9800' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+    background-position: 0 100%;
+    background-size: auto 6px;
+    background-repeat: repeat-x;
+    text-decoration: none;
+  }
+
+
+// Diactivate kinssis on mobile
+@media (max-width: 640px) {
+  *[data-kinssis]{
+    /*for all elements with background parallax effect*/
+    background-position: center !important; 
+
+    /*for all elements with foreground parallax effect*/
+    transform: none !important;
+  }
+}
 
 .appNoise {
     height: 100%;
