@@ -36,7 +36,7 @@
 
           <p class="mt-4">In the past ten years, I’ve been performing digital, interactive experiences, </p>
 
-          <p class="mt-4">I’m currently working at easybooking, as a user interface designer. Over the past few years, I’ve had the privilege to work on some fantastic projects.</p>
+          <p class="mt-4">I’m currently working at easybooking, as a Senior Product Designer. Over the past few years, I’ve had the privilege to work on some fantastic projects.</p>
 
           <h4 class="text-4xl font-bold mt-6 lg:mt-20">Social</h4>
           <p>
@@ -50,8 +50,11 @@
               <li><a href="https://www.behance.net/chrishaid" class="main-link" target="_blank">Behance</a></li>
             </ul>
           </p>
-          <h4 class="text-4xl font-bold mt-6 lg:mt-20">Social</h4>
+          <h4 class="text-4xl font-bold mt-6 lg:mt-20">Contact</h4>
           <p><a href="mailto:info@christophhaid.com" class="main-link">hello@christophhaid.com</a></p>
+          <p>Innsbruckerstr. 42a</p>
+          <p>6176 Völs</p>
+          <p>Austria</p>
         </div>
       </div>
 
