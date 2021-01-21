@@ -34,9 +34,11 @@
         <div class="content text-2xl pb-8">
           <p>Senior Product Designer living in Innsbruck, Austria with a heavy focus on awesome interfaces, creative solutions and great user experience.<br></p>
 
-          <p class="mt-4">In the past ten years, I’ve been performing digital, interactive experiences, </p>
+          <p class="mt-4">Over the years I’ve been fortunate enough to work with agencies & individuals across a variety of sectors, often with the goal of making the world a better place. </p>
 
-          <p class="mt-4">I’m currently working at easybooking, as a Senior Product Designer. Over the past few years, I’ve had the privilege to work on some fantastic projects.</p>
+          <p class="mt-4">I’m currently working at easybooking, as a Senior Product Designer.</p>
+
+          <p class="mt-4">Outside of work, I’m interested in all kinds of sports, cooking, gaming, football and i realy love cycling.</p>
 
           <h4 class="text-4xl font-bold mt-6 lg:mt-20">Social</h4>
           <p>

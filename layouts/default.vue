@@ -11,7 +11,18 @@
       :dotColor="'#fff'"
       :dotColorHover="'lightgray'"
       :hoverSize="1.5"
+      v-if="$colorMode.preference === 'dark'"
     ></custom-cursor>
+    <custom-cursor
+      :targets="['img', 'a', 'button', 'your-hover-class']"
+      :circleColor="'#433422'"
+      :circleColorHover="'#433422'"
+      :dotColor="'#433422'"
+      :dotColorHover="'lightgray'"
+      :hoverSize="1.5"
+      v-if="$colorMode.preference === 'light'"
+    ></custom-cursor>
+
   </main>
 </template>
 <script>
