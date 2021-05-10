@@ -1,7 +1,15 @@
 <template>
   <div class="custom-cursor">
-    <div class="custom-cursor__circle" :style="circleStyle" ref="customCursorCircle"></div>
-    <div class="custom-cursor__dot" :style="dotStyle" ref="customCursorDot"></div>
+    <div
+      class="custom-cursor__circle"
+      :style="circleStyle"
+      ref="customCursorCircle"
+    ></div>
+    <div
+      class="custom-cursor__dot"
+      :style="dotStyle"
+      ref="customCursorDot"
+    ></div>
   </div>
 </template>
 
@@ -26,7 +34,8 @@ export default {
       dotPosX: null,
       dotPosY: null,
       circleStyle: null,
-      dotStyle: null
+      dotStyle: null,
+      customCursor: null
     };
   },
   methods: {
@@ -62,7 +71,9 @@ export default {
     }
   },
   mounted() {
-    window.addEventListener("mousemove", this.customCursor);
+    if (process.client) {
+      window.addEventListener("mousemove", this.customCursor);
+    }
   }
 };
 </script>

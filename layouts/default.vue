@@ -1,45 +1,48 @@
 <template>
-  <main translate="no" >
+  <main translate="no">
     <div class="content">
-      <Nuxt/>
+      <Nuxt />
     </div>
-    
-     <custom-cursor
-      :targets="['img', 'a', 'button', 'your-hover-class']"
+    <!-- <CustomCursor
       :circleColor="'#fff'"
       :circleColorHover="'#fff'"
       :dotColor="'#fff'"
       :dotColorHover="'lightgray'"
       :hoverSize="1.5"
-      v-if="$colorMode.preference === 'dark'"
-    ></custom-cursor>
-    <custom-cursor
-      :targets="['img', 'a', 'button', 'your-hover-class']"
-      :circleColor="'#433422'"
-      :circleColorHover="'#433422'"
-      :dotColor="'#433422'"
-      :dotColorHover="'lightgray'"
-      :hoverSize="1.5"
+    /> -->
+    <cursor-fx
+      ref="cursor"
       v-if="$colorMode.preference === 'light'"
-    ></custom-cursor>
+      color="#00000"
+      shape="square"
+    />
 
+    <cursor-fx
+      ref="cursor"
+      v-if="$colorMode.preference === 'dark'"
+      color="#fff"
+      shape="square"
+    />
   </main>
 </template>
 <script>
 // Component
 // import { CursorFx } from "@luxdamore/vue-cursor-fx";
-// import "@luxdamore/vue-cursor-fx/dist/CursorFx.css";
+import { CursorFx } from "@luxdamore/vue-cursor-fx";
 
 // Layout
 export default {
   name: "default",
-  // components: { CursorFx }
+  components: {
+    "cursor-fx": CursorFx
+    // CustomCursor
+  }
 };
 </script>
 
 <style>
 html {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -48,8 +51,6 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
 }
-
-* { cursor: none; }
 
 *,
 *::before,

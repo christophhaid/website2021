@@ -66,27 +66,25 @@
 </template>
 
 <script>
-import { KinesisContainer, KinesisElement } from 'vue-kinesis'
+import { KinesisContainer, KinesisElement } from "vue-kinesis";
 export default {
   head: {
-    title: 'About Me | Christoph Haid - Product Strategist & UX/UI Designer.',
+    title: "About Me | Christoph Haid - Product Strategist & UX/UI Designer.",
   },
   components: {
     KinesisContainer,
-    KinesisElement 
-  }
+    KinesisElement,
+  },
 };
 </script>
 
 <style lang="scss">
-
-.heroAbout{
+.heroAbout {
   font-size: 11vw;
   line-height: 90%;
   padding: 160px 30px;
   @screen lg {
-     padding: 7% 4%;
+    padding: 7% 4%;
   }
 }
-
 </style>

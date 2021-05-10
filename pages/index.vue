@@ -2,92 +2,112 @@
   <div class="layoutWrapper">
     <div class="appNoise"></div>
     <div>
-    <header-bar></header-bar>
-    <kinesis-container >
-    <section class="heroMain">
-      <div class="heroMain__wrapper">
-        <div></div> 
-        <div class="heroMain__inner">
-              <kinesis-element :strength="20" data-kinssis="active"> 
-                 <transition appear name="custom-classes-transition" enter-active-class="animate__animated animate__fadeIn animate__delay-1s">
+      <header-bar></header-bar>
+      <kinesis-container>
+        <section class="heroMain">
+          <div class="heroMain__wrapper">
+            <div></div>
+            <div class="heroMain__inner">
+              <kinesis-element :strength="20" data-kinssis="active">
+                <transition
+                  appear
+                  name="custom-classes-transition"
+                  enter-active-class="animate__animated animate__fadeIn animate__delay-1s"
+                >
                   <figure class="image">
-                    <img alt="" src="~assets/images/christoph.png" class="image__img">
+                    <img
+                      alt=""
+                      src="~assets/images/christoph.png"
+                      class="image__img"
+                    />
                   </figure>
-                 </transition>
+                </transition>
               </kinesis-element>
-        </div> 
-       
-        <div class="heroMain__text">
-            <kinesis-element :strength="-20" data-kinssis="active">
-          <div class="overflow-hidden">
-              <transition appear name="custom-classes-transition" enter-active-class="animate__animated animate__slideInUp animate__delay-2s">
-              <h2 class="title">
-              Design
-              </h2>
-              </transition>
+            </div>
+
+            <div class="heroMain__text">
+              <kinesis-element :strength="-20" data-kinssis="active">
+                <div class="overflow-hidden">
+                  <transition
+                    appear
+                    name="custom-classes-transition"
+                    enter-active-class="animate__animated animate__slideInUp animate__delay-2s"
+                  >
+                    <h2 class="title">
+                      Design
+                    </h2>
+                  </transition>
+                </div>
+                <div class="overflow-hidden">
+                  <transition
+                    appear
+                    name="custom-classes-transition"
+                    enter-active-class="animate__animated animate__slideInUp animate__delay-3s"
+                  >
+                    <h2 class="subtitle">
+                      & Code
+                    </h2>
+                  </transition>
+                </div>
+              </kinesis-element>
+            </div>
+
+            <div class="heroMain__footer w-full flex justify-between">
+              <a @click="$colorMode.preference = 'light'" href="#">light</a>
+              <div class="animate__animated animate__bounce">
+                Scroll to discover
+                <div class="icon"></div>
+              </div>
+              <a @click="$colorMode.preference = 'dark'" href="#">dark</a>
+            </div>
           </div>
-          <div class="overflow-hidden">
-              <transition appear name="custom-classes-transition" enter-active-class="animate__animated animate__slideInUp animate__delay-3s">
-              <h2 class="subtitle">
-              & Code
-              </h2>
-              </transition>
-          </div>
-          </kinesis-element>
-        </div>
-        
-        <div class="heroMain__footer w-full flex justify-between">
-          <a @click="$colorMode.preference = 'light'" href="#" >light</a>
-          <div class="animate__animated animate__bounce">
-            Scroll to discover
-              <div class="icon"></div>
-          </div>
-          <a @click="$colorMode.preference = 'dark'" href="#" >dark</a>
-        </div>
-      </div>
-    </section>
-    </kinesis-container>
+        </section>
+      </kinesis-container>
     </div>
   </div>
 </template>
 
 <script>
 // import ColorMode from '../components/ColorMode.vue';
-import { KinesisContainer, KinesisElement } from 'vue-kinesis'
+import { KinesisContainer, KinesisElement } from "vue-kinesis";
 
 export default {
   transition: "intro",
-  components: { 
+  components: {
     KinesisContainer,
-    KinesisElement 
+    KinesisElement
   },
   methods: {
     handleWheel() {
-        if (event.deltaY > 0) {
-            this.$router.push({ path: '/about' });
-        }
+      if (event.deltaY > 0) {
+        this.$router.push({ path: "/about" });
+      }
     }
   },
-  created () {
-      if (process.client) { 
-          window.addEventListener('wheel', this.handleWheel);
-      }
+  created() {
+    if (process.client) {
+      window.addEventListener("wheel", this.handleWheel);
+    }
   },
-}
+  destroyed() {
+    if (process.client) {
+      window.addEventListener("wheel", this.handleWheel);
+    }
+  }
+};
 </script>
 
 <style lang="scss">
-
-.heroMain{
+.heroMain {
   height: calc(100vh - 70px);
   min-height: 600px;
   width: 100vw;
   overflow: hidden;
   position: relative;
   @screen lg {
-      min-height: calc(100vh);
+    min-height: calc(100vh);
   }
-  &__wrapper{
+  &__wrapper {
     align-items: center;
     display: flex;
     -webkit-box-orient: vertical;
@@ -104,14 +124,14 @@ export default {
       padding: 40px;
     }
 
-    .image img{
+    .image img {
       max-width: 260px;
       transition: all ease-in-out 0.5s;
       // &:hover{
       //   transform: scale(0.7);
       // }
       @screen lg {
-         max-width: 390px;
+        max-width: 390px;
       }
     }
   }
@@ -121,13 +141,13 @@ export default {
     position: absolute;
     text-align: center;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     transition: all ease 0.5s;
     z-index: 2;
     // mix-blend-mode: difference;
     @screen lg {
-       font-size: 15vw;
-      }
+      font-size: 15vw;
+    }
     .title {
       font-family: var(--font-titleone);
       display: block;
@@ -147,7 +167,7 @@ export default {
 }
 
 .icon:before {
-  content: '';
+  content: "";
   background: var(--color);
   height: 10px;
   width: 2px;
@@ -167,7 +187,6 @@ export default {
     transform: translateY(24px);
   }
 }
-
 
 // Page Transiton Effect
 $t-duration: 800ms;
@@ -252,5 +271,4 @@ $t-delay: 300ms;
     transform-origin: right;
   }
 }
-
 </style>
