@@ -36,7 +36,7 @@
 
           <p class="mt-4">Over the years I’ve been fortunate enough to work with agencies & individuals across a variety of sectors, often with the goal of making the world a better place. </p>
 
-          <p class="mt-4">I’m currently working at easybooking, as a Senior Product Designer.</p>
+          <p class="mt-4">I’m currently working at easybooking, as a Senior Product Designer & Software Developer.</p>
 
           <p class="mt-4">Outside of work, I’m interested in all kinds of sports, cooking, gaming, football and i realy love cycling.</p>
 
@@ -54,8 +54,8 @@
           </p>
           <h4 class="text-4xl font-bold mt-6 lg:mt-20">Contact</h4>
           <p><a href="mailto:info@christophhaid.com" class="main-link">hello@christophhaid.com</a></p>
-          <p>Innsbruckerstr. 42a</p>
-          <p>6176 Völs</p>
+          <p>Plangg 15b</p>
+          <p>6460 Imst</p>
           <p>Austria</p>
         </div>
       </div>
