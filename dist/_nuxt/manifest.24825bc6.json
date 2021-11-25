@@ -1,6 +1,7 @@
 {
   "name": "christophhaid",
   "short_name": "christophhaid",
+  "description": "## Build Setup",
   "icons": [
     {
       "src": "/_nuxt/icons/icon_64x64.d06c7e.png",

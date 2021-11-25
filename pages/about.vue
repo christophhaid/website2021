@@ -40,13 +40,13 @@
 
           <p class="mt-4">Outside of work, I’m interested in all kinds of sports, cooking, gaming, football and i realy love cycling.</p>
 
-          <h4 class="text-4xl font-bold mt-6 lg:mt-20">Social</h4>
+    <h4 class="text-4xl font-bold mt-6 lg:mt-20">Social</h4>
           <p>
             <ul class="mt-4">
               <li><a href="https://www.linkedin.com/in/christoph-haid/" class="main-link" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://github.com/christophhaid" class="main-link" target="_blank">Github</a></li>
               <li><a href="https://dribbble.com/christophhaid" class="main-link" target="_blank">Dribble</a></li>
               <li><a href="https://figma.com/@christophhaid" class="main-link" target="_blank">Figma</a></li>
-              <li><a href="https://github.com/christophhaid" class="main-link" target="_blank">Github</a></li>
               <!-- <li><a href="https://gitlab.com/christoph.haid" class="main-link" target="_blank">Gitlab</a></li> -->
               <li><a href="https://www.instagram.com/christophhaid/" class="main-link" target="_blank">Instagram</a></li>
               <li><a href="https://www.behance.net/chrishaid" class="main-link" target="_blank">Behance</a></li>
